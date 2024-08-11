@@ -16,7 +16,7 @@ slik:
 
 slurm:
   slurmabler:
-    image: "slurmacr.azurecr.io/slurm/slurd:v0.0.1"
+    image: "slurmacr.azurecr.io/slurm/slurmabler:v0.0.1"
     service_account: "slik"
   munged:
     image: "slurmacr.azurecr.io/slurm/munged:v0.0.1"

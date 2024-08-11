@@ -1,8 +1,13 @@
 FROM ubuntu:22.04
 
-RUN apt update && apt install -y ca-certificates slurmd munge
+RUN apt update && apt install -y ca-certificates
 
 WORKDIR /app
-COPY slurmabler slurmabler
+COPY slurmabler ./slurmabler
+COPY config.yaml ./config.yaml
 
-CMD ["/app/slurmabler"]
+# Ensure the binary is executable
+RUN chmod +x ./slurmabler
+
+# Use CMD with array syntax
+CMD ["./slurmabler", "-config", "./config.yaml"]

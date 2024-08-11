@@ -8,5 +8,5 @@ spec:
   slurmdbd: true
   slurmrestd: true
   mariadb:
-    storage_size: 50G
+    storage_size: 5G
     storage_class: default
